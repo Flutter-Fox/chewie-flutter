@@ -21,9 +21,9 @@ typedef ChewieRoutePageBuilder = Widget Function(
 
 typedef ChewieFullscreenNavigator = Future<dynamic> Function(
   BuildContext context,
-  ChewieControllerProvider provider, {
+  ChewieControllerProvider provider,
   bool rootNavigator,
-});
+);
 
 /// A Video Player with Material and Cupertino skins.
 ///
@@ -183,7 +183,7 @@ class ChewieState extends State<Chewie> {
       await widget.controller.navigator!(
         context,
         controllerProvider,
-        rootNavigator: widget.controller.useRootNavigator,
+        widget.controller.useRootNavigator,
       );
     }
 
